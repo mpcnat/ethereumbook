@@ -6,18 +6,28 @@
     "copyright.html",
     "preface.asciidoc",
     "glossary.asciidoc",
-    "ix.html",
-    "author_bio.html",
-    "colo.html",
     "what-is.asciidoc",
     "intro.asciidoc",
     "clients.asciidoc",
     "keys-addresses.asciidoc",
     "wallets.asciidoc",
     "transactions.asciidoc",
+    "smart-contracts-solidity.asciidoc",
+    "smart-contracts-vyper.asciidoc",
+    "smart-contracts-security.asciidoc",
     "tokens.asciidoc",
+    "oracles.asciidoc",
+    "dapps.asciidoc",
+    "evm.asciidoc",
+    "consensus.asciidoc",
+    "appdx-forks-history.asciidoc",
     "appdx-standards-eip-erc.asciidoc",
-    "appdx-evm-opcodes-gas.asciidoc"
+    "appdx-evm-opcodes-gas.asciidoc",
+	"appdx-dev-tools.asciidoc",
+    "appdx-web3js-tutorial.asciidoc",
+    "ix.html",
+    "author_bio.html",
+    "colo.html"
   ],
   "formats": {
     "pdf": {
@@ -53,7 +63,7 @@
       "consolidated": true
     }
   },
-  "theme": "https://github.com/oreillymedia/atlas_tech1c_theme.git",
+  "theme": "https://github.com/oreillymedia/animal_theme_sass",
   "title": "Mastering Ethereum",
   "templating": true,
   "print_isbn13": "1491971940",

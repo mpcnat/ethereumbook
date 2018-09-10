@@ -1,14 +1,14 @@
-[[me-evm-opcodes-gas-header]]
 [appendix]
-
+[[evm_opcodes]]
 == Ethereum EVM Opcodes and gas consumption
 
 This appendix is based on the consolidation work done by the people of https://github.com/trailofbits/evm-opcodes as a Reference for Ethereum VM (EVM) Opcodes and Instruction information with the following LICENSE https://github.com/trailofbits/evm-opcodes/blob/master/LICENSE.
 
-Table
-~~~~~
 
+
+[[evm_opcodes_table]]
 [cols=",,,,",options="header",]
+.EVM Opcodes and Gas Cost
 |=======================================================================================================================================================================================================
 |Opcode |Name |Description |Extra Info |Gas
 |`0x00` |STOP |Halts execution |- |0
@@ -37,15 +37,15 @@ Table
 
 |`0x0c` - `0x0f` |Unused |Unused |- |
 
-|`0x10` |LT |Less-than comparision |- |3
+|`0x10` |LT |Less-than comparison |- |3
 
-|`0x11` |GT |Greater-than comparision |- |3
+|`0x11` |GT |Greater-than comparison |- |3
 
-|`0x12` |SLT |Signed less-than comparision |- |3
+|`0x12` |SLT |Signed less-than comparison |- |3
 
-|`0x13` |SGT |Signed greater-than comparision |- |3
+|`0x13` |SGT |Signed greater-than comparison |- |3
 
-|`0x14` |EQ |Equality comparision |- |3
+|`0x14` |EQ |Equality comparison |- |3
 
 |`0x15` |ISZERO |Simple not operator |- |3
 
@@ -58,6 +58,8 @@ Table
 |`0x19` |NOT |Bitwise NOT operation |- |3
 
 |`0x1a` |BYTE |Retrieve single byte from word |- |3
+
+|`0x1b` - `0x1f` |Unused |Unused |- |
 
 |`0x20` |SHA3 |Compute Keccak-256 hash |- |30
 
@@ -275,23 +277,23 @@ Table
 
 |`0xa5` - `0xaf` |Unused |- |- |
 
-|`0xb0` |JUMPTO |Tentitive https://github.com/ethereum/solidity/blob/c61610302aa2bfa029715b534719d25fe3949059/libevmasm/Instruction.h#L176[libevmasm has different numbers] | https://github.com/ethereum/EIPs/blob/606405b5ab7aa28d8191958504e8aad4649666c9/EIPS/eip-615.md[EIP 615] |
+|`0xb0` |JUMPTO |Tentative https://github.com/ethereum/solidity/blob/c61610302aa2bfa029715b534719d25fe3949059/libevmasm/Instruction.h#L176[libevmasm has different numbers] | https://github.com/ethereum/EIPs/blob/606405b5ab7aa28d8191958504e8aad4649666c9/EIPS/eip-615.md[EIP 615] |
 
-|`0xb1` |JUMPIF |Tentitive |https://github.com/ethereum/EIPs/blob/606405b5ab7aa28d8191958504e8aad4649666c9/EIPS/eip-615.md[EIP 615] |
+|`0xb1` |JUMPIF |Tentative |https://github.com/ethereum/EIPs/blob/606405b5ab7aa28d8191958504e8aad4649666c9/EIPS/eip-615.md[EIP 615] |
 
-|`0xb2` |JUMPSUB |Tentitive |https://github.com/ethereum/EIPs/blob/606405b5ab7aa28d8191958504e8aad4649666c9/EIPS/eip-615.md[EIP 615] |
+|`0xb2` |JUMPSUB |Tentative |https://github.com/ethereum/EIPs/blob/606405b5ab7aa28d8191958504e8aad4649666c9/EIPS/eip-615.md[EIP 615] |
 
-|`0xb4` |JUMPSUBV |Tentitive |https://github.com/ethereum/EIPs/blob/606405b5ab7aa28d8191958504e8aad4649666c9/EIPS/eip-615.md[EIP 615] |
+|`0xb4` |JUMPSUBV |Tentative |https://github.com/ethereum/EIPs/blob/606405b5ab7aa28d8191958504e8aad4649666c9/EIPS/eip-615.md[EIP 615] |
 
-|`0xb5` |BEGINSUB |Tentitive |https://github.com/ethereum/EIPs/blob/606405b5ab7aa28d8191958504e8aad4649666c9/EIPS/eip-615.md[EIP 615] |
+|`0xb5` |BEGINSUB |Tentative |https://github.com/ethereum/EIPs/blob/606405b5ab7aa28d8191958504e8aad4649666c9/EIPS/eip-615.md[EIP 615] |
 
-|`0xb6` |BEGINDATA |Tentitive |https://github.com/ethereum/EIPs/blob/606405b5ab7aa28d8191958504e8aad4649666c9/EIPS/eip-615.md[EIP 615] |
+|`0xb6` |BEGINDATA |Tentative |https://github.com/ethereum/EIPs/blob/606405b5ab7aa28d8191958504e8aad4649666c9/EIPS/eip-615.md[EIP 615] |
 
-|`0xb8` |RETURNSUB |Tentitive |https://github.com/ethereum/EIPs/blob/606405b5ab7aa28d8191958504e8aad4649666c9/EIPS/eip-615.md[EIP 615] |
+|`0xb8` |RETURNSUB |Tentative |https://github.com/ethereum/EIPs/blob/606405b5ab7aa28d8191958504e8aad4649666c9/EIPS/eip-615.md[EIP 615] |
 
-|`0xb9` |PUTLOCAL |Tentitive |https://github.com/ethereum/EIPs/blob/606405b5ab7aa28d8191958504e8aad4649666c9/EIPS/eip-615.md[EIP 615] |
+|`0xb9` |PUTLOCAL |Tentative |https://github.com/ethereum/EIPs/blob/606405b5ab7aa28d8191958504e8aad4649666c9/EIPS/eip-615.md[EIP 615] |
 
-|`0xba` |GETLOCAL |Tentitive |https://github.com/ethereum/EIPs/blob/606405b5ab7aa28d8191958504e8aad4649666c9/EIPS/eip-615.md[EIP 615] |
+|`0xba` |GETLOCAL |Tentative |https://github.com/ethereum/EIPs/blob/606405b5ab7aa28d8191958504e8aad4649666c9/EIPS/eip-615.md[EIP 615] |
 
 |`0xbb` - `0xe0` |Unused |- |- |
 
@@ -329,7 +331,3 @@ Table
 
 |`0xff` |SELFDESTRUCT |Halt execution and register account for later deletion |- |5000*
 |=======================================================================================================================================================================================================
-
-
-
-Thanks again to https://github.com/trailofbits/evm-opcodes for their contribution.
